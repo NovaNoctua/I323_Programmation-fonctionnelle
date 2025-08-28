@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceDuMarche", "PlaceDuMarche.csproj", "{C4C0C3B0-D54F-4FD6-ACA4-5DBF240D8CE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "place-du-marche-etap1-.net4.7.2", "place-du-marche-etap1-.net4.7.2.csproj", "{C4C0C3B0-D54F-4FD6-ACA4-5DBF240D8CE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

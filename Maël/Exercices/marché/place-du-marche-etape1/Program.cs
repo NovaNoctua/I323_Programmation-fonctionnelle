@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System.Text.RegularExpressions;
 
 namespace marché
 {
@@ -118,9 +118,6 @@ namespace marché
             numberOfSellers("pêches", products);
             mostProducts("pastèques", products);
 
-            //numberOfSellersLinq("pêches", products);
-            //mostProductsLinq("pastèques", products);
-
             Console.ReadLine();
 
             void numberOfSellers(string productName, List<Product> productList)
@@ -159,29 +156,6 @@ namespace marché
                 else
                 {
                     Console.WriteLine($"C'est {mostProduct.Provider} qui a le plus de {productName} (stand {mostProduct.Location}, {mostProduct.Quantity} {mostProduct.Unit}s)");
-                }
-            }
-
-            void numberOfSellersLinq(string productName, List<Product> productList)
-            {
-                List<Product> allSellers = productList
-                    .Where(x => x.Name.ToLower() == productName.ToLower())
-                    .ToList();
-                Console.WriteLine($"Il y a {allSellers.Count} vendeurs de {productName}");
-            }
-
-            void mostProductsLinq(string productName, List<Product> productList)
-            {
-                List<Product> mostProducts = productList
-                    .Where(o => o.Name.ToLower() == productName.ToLower())
-                    .OrderByDescending(o => o.Quantity)
-                    .ToList();
-                if (mostProducts.Count > 0)
-                {
-                    Console.WriteLine($"C'est {mostProducts[0].Provider} qui a le plus de {productName} (stand {mostProducts[0].Location}, {mostProducts[0].Quantity} {mostProducts[0].Unit}s)");
-                } else
-                {
-                    Console.WriteLine($"Personne ne vend de {productName}");
                 }
             }
         }
